@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Display Tab Information",
+  "description": "Extension will display Tab Id and Tab URL in an alert box",
+  "version": "1.0",
+  
+  "background": {
+    "persistent": false,
+    "scripts": ["TabBackGround.js"]
+  },
+  
+  "commands":
+	{
+		"toggle" : 
+		{
+			"suggested_key": {
+              "default": "Alt+A",
+              "mac": "Command+Shift+Y"
+            },
+			"description" : "Display Id and URL of the current open/active tab."
+		}
+	},
+  
+  "permissions": ["tabs", "background"],
+   
+  "browser_action": {
+    "default_title": "This App will display Tab Id and Tab URL when user issues the command.",
+    "default_icon": "hello.png"
+  }		
+}
